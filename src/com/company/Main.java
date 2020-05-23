@@ -1,36 +1,24 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
-        Circle c;
-        SquareX s;
-        Triangle tr;
-        Trapeze tz;
-        Figures[] objects = new Figures[]{};
-
         int objCount = (int) (1 + Math.random() * 12);//количество obj
-        for (int i = 0; i < objCount; i++) {
-            int rnd = (int) (Math.random() * 4);
-            switch (rnd) {
-                case (0):
-                    c = new Circle();
-                    c.draw(c);
-                    break;
-                case (1):
-                    tr = new Triangle();
-                    tr.draw(tr);
-                    break;
-                case (2):
-                    s = new SquareX();
-                    s.draw(s);
-                    break;
-                case (3):
-                    tz = new Trapeze();
-                    tz.draw(tz);
-                    break;
-            }
 
-        }
+        ArrayList list2 = new ArrayList();
+for (int i = 0;i<objCount;i++) {
+    ArrayList list = new ArrayList();
+    list.add(new Circle());
+    list.add(new SquareX());
+    list.add(new Triangle());
+    list.add(new Trapeze());
+    int rnd = (int) (Math.random() * 4);
+    list2.add(i, list.get(rnd));
+}
+for (int i = 0;i<list2.size(); i++)
+    System.out.println(list2.get(i));
+        
     }
 }

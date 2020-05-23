@@ -1,14 +1,16 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Trapeze extends Figures {
     double a, b, h;
     String color;
 
     public Trapeze() {
-        this.a = generateSide1();
-        this.b = generateSide2();
-        this.h = generateHeight();
-        this.color = generateColor();
+        this.a = Objects.requireNonNull(generateSide1()) ;
+        this.b = Objects.requireNonNull(generateSide2());
+        this.h = Objects.requireNonNull(generateHeight());
+        this.color = Objects.requireNonNull(generateColor()) ;
     }
 
     @Override
@@ -86,3 +88,9 @@ public class Trapeze extends Figures {
 }
 
 
+  /*  public Trapeze() {
+        this.a = generateSide1();
+        this.b = generateSide2();
+        this.h = generateHeight();
+        this.color = generateColor();
+    }*/

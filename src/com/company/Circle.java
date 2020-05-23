@@ -1,13 +1,15 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Circle extends Figures {
    double r;
    String color;
    final double Pi = 3.1415d;
 
     public Circle() {
-        this.r = generateRadius();
-        this.color = generateColor();
+        this.r = Objects.requireNonNull(generateRadius());
+        this.color =Objects.requireNonNull(generateColor());
     }
 
     @Override
@@ -15,7 +17,8 @@ public class Circle extends Figures {
         return  Pi*r*r;
    }
 
-   @Override
+
+    @Override
    public void draw(Figures obj){
        System.out.println("Object: " + obj);
    }

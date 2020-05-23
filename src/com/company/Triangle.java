@@ -1,13 +1,15 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Triangle extends Figures {
     double a, h;
     String color;
 
     public Triangle() {
-        this.a = generateSide();
-        this.h = generateHeight();
-        this.color = generateColor();
+        this.a = Objects.requireNonNull(generateSide());
+        this.h = Objects.requireNonNull(generateHeight());
+        this.color = Objects.requireNonNull(generateColor());
     }
 
     @Override
@@ -74,4 +76,8 @@ public class Triangle extends Figures {
 }
 
 
-
+   /* public Triangle() {
+        this.a = generateSide();
+        this.h = generateHeight();
+        this.color = generateColor();
+    }*/

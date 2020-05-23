@@ -1,12 +1,14 @@
 package com.company;
 
+import java.util.Objects;
+
 public class SquareX extends Figures {
     double a;
     String color;
 
     public SquareX() {
-        this.a = generateSide();
-        this.color = generateColor();
+        this.a = Objects.requireNonNull(generateSide());
+        this.color =Objects.requireNonNull(generateColor());
     }
 
     @Override
@@ -63,3 +65,7 @@ public class SquareX extends Figures {
 }
 
 
+    /*public SquareX() {
+        this.a = generateSide();
+        this.color = generateColor();
+    }*/
